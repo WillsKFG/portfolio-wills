@@ -1,5 +1,106 @@
-*{
+/*RESET*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+body {
+    background-color: #F5F5F5;
+    font-size: 1rem;
+    font-family: 'Marcellus', serif;
+}
+
+/* HEADER — ocupa a largura toda da tela */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0F52BA;
+    color: aliceblue;
+    padding: 28px 40px; /* 28px em cima/baixo, 40px nos lados */
+}
+
+/* NAV — links lado a lado */
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+/* Links do nav */
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    text-decoration: underline; /* sublinha ao passar o mouse */
+}
+
+/* FOTO DE PERFIL */
+.foto_perfil {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* CONTAINER — centraliza o conteúdo e dá o padding nos lados */
+.container {
+    max-width: 800px;
+    margin: 0 auto;    /* centraliza horizontalmente */
+    padding: 40px 20px;
+}
+
+/* SEÇÃO INICIAL — apresentação */
+.inicial {
+    margin-bottom: 32px;
+}
+
+.inicial p {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* DESTAQUE — cor no nome */
+.destaque {
+    color: #0F52BA;
+}
+
+/* PARÁGRAFOS */
+p {
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+/*MEDIA QUERY — só vale quando a tela
+   tiver 600px ou menos (celular)*/
+@media (max-width: 600px) {
+
+    /* Header vira coluna no celular */
+    header {
+        flex-direction: column;  /* empilha em vez de lado a lado */
+        text-align: center;
+        gap: 16px;
+        padding: 24px 20px;
+    }
+
+    /* Nav centralizado no celular */
+    nav {
+        gap: 16px;
+        flex-wrap: wrap;        /* quebra linha se não couber */
+        justify-content: center;
+    }
+
+    /* Container com menos padding no celular */
+    .container {
+        padding: 24px 16px;
+    }
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
